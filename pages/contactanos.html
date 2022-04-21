@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="../img/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Tu Joystick Lab</title>
+</head>
+<body>
+    <h1 class="title__color" id="title">Consultas? Dudas? No dudes en escribirnos</h1>
+    <nav> 
+        <ul class="menu__color" id="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="precios.html">Nuestros Precios</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="contactanos.html" class="active">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="formContainer"> <!--formulario para contactarse con la empresa -->
+            <h2 class="form__h2">contactanos</h2>
+            <form class="form" action="" method="post" enctype="text/plain">
+                <div class="form_radio">
+                    <input  name="sexo" type="radio">
+                    <label for="sex" class="form__rtext">Masculino</label>
+
+                    <input  type="radio" name="sexo">
+                    <label for="sex" class="form__rtext">Femenino</label>
+
+                    <input  type="radio" name="sexo">
+                    <label for="sex" class="form__rtext">Otro</label>
+
+                </div>
+
+                <label for="name" class="form__label">Nombre Y Apellido </label> 
+                <input class="form__input" type="text" required placeholder="Nombre y Apellido">
+
+                <label for="mail" class="form__label">Mail De Contacto</label>
+                <input class="form__input" type="email" placeholder="tuemail@email.com">
+
+                <label for="tel" class="form__label">Telefono</label>
+                <input class="form__input" type="tel" placeholder="123456789">
+
+                <label for="text" class="form__label">Comentarios</label>
+                <textarea class="form__textarea" name="" id="" cols="30" rows="10" placeholder="Dejanos Tu Comentario Aca"></textarea>
+
+                <input type="submit" value="Enviar" class="form__input form__input--submit">
+            </form>
+        </section>
+    </main>
+
+    <footer id="socials">
+        <li><a href="https://Facebook.com" target="_blank">Facebook</a></li> <!--link a la empresa-->
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li><!--link a la empresa-->
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li><!--link a la empresa-->
+    </footer>
+</body>
+</html>
