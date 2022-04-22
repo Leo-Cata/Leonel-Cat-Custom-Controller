@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Tu Joystick Lab</title>
 </head>
 <body>
     <header>
-            <h1 class="title title__color">Tu Joystick Lab</h1>
+            <h1 class="title title__color wow hinge">Tu Joystick Lab</h1>
 
             <nav class="menu">
                 <ul class="menu__color" >
@@ -28,8 +32,8 @@
             <iframe class="media__pos" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-if1ib0C7kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
 
-        <section class="text"><!--Texto hablando y promocionando el producto-->
-            <h4 class="text__font menu__color">Personaliza aún más las características de tu Mando inalámbrico Xbox con acabados metálicos para los gatillos texturizados y la cruceta híbrida, además de agarres de goma. Descubre hasta dónde te llevará la inspiración y crea un mando personalizado que sea exclusivamente tuyo.</h4>
+        <section class="text wow animate__bounce"><!--Texto hablando y promocionando el producto-->
+            <h4 class="text__font menu__color wow animate__bounce">Personaliza aún más las características de tu Mando inalámbrico Xbox con acabados metálicos para los gatillos texturizados y la cruceta híbrida, además de agarres de goma. Descubre hasta dónde te llevará la inspiración y crea un mando personalizado que sea exclusivamente tuyo.</h4>
         </section> 
 
         <div class="banner">
@@ -51,5 +55,11 @@
         <li><a class="instagram" href="https://instagram.com" target="_blank">Instagram</a></li><!--link a la empresa-->
         <li class="mail">Mail: correo@mail.com</li>
     </footer>
+
+    <!--wow animation-->
+    <script src="js/wow.min.js"></script>
+            <script>
+            new WOW().init();
+            </script>
 </body>
 </html>

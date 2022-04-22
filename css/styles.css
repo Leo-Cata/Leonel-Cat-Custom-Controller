@@ -6,6 +6,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 
 /*header*/
@@ -187,18 +188,27 @@ th, td{/*bg y color de las lectras de la tabla*/
     background-image: url(../img/producto2.png);
     background-size: cover;
     background-position: center;
+    transition: all .25s
 }
 .grid__2{
     grid-area: grid__2;
     background-image: url(../img/producto1.png);
     background-size: cover;
     background-position: center;
+    transition: all .25s
 }
 .grid__3{
     grid-area: grid__3;
     background-image: url(../img/sample1.png);
     background-size: cover;
     background-position: center;
+    transition: all .25s
+}
+.grid__1:hover, .grid__2:hover, .grid__3:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .25s;
+    cursor: pointer;
 }
 /*grilla*/
 
@@ -217,7 +227,14 @@ th, td{/*bg y color de las lectras de la tabla*/
     font-family: 'Poppins', sans-serif;
 }
 /*footer*/
-
+.imgSample{
+    transition: all .25s;
+}
+.imgSample:hover{
+    transform: scale(1.05);
+    transition: all .25s;
+    cursor: pointer;
+}
 /*responsive*/
 @media only screen and (max-width: 559px){
     
