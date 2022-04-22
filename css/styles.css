@@ -219,7 +219,7 @@ th, td{/*bg y color de las lectras de la tabla*/
 /*footer*/
 
 /*responsive*/
-@media only screen and (max-width: 560px){
+@media only screen and (max-width: 559px){
     
     .title{/*font size adecuado a la resolucion*/
         font-size: 2vh;
@@ -282,10 +282,20 @@ th, td{/*bg y color de las lectras de la tabla*/
     flex-direction: column;
     font-size: 13px;
     }
+    /*banner*/
+    .bannerSample{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgSample{
+        width: fit-content;
+        height: 100px;
+    }
 }
 
-@media only screen and (min-width:561px) and (max-width: 830px)
-{
+
+@media only screen and (min-width: 560px) and (max-width: 960px){
     /*font size adecuado a la resolucion*/
     .text__font{
         font-size: 20px;
@@ -293,9 +303,6 @@ th, td{/*bg y color de las lectras de la tabla*/
     .title{
         font-size: 4vh;
     }
-}
-
-@media only screen and (min-width: 560px) and (max-width: 960px){
     .grid{
         display: grid;
         margin: 0 auto;
@@ -331,7 +338,7 @@ th, td{/*bg y color de las lectras de la tabla*/
     /*grilla*/
 }
 
-@media only screen and (min-width: 831px) and (max-width: 1320px){
+@media only screen and (min-width: 831px) and (max-width: 1024px){
     /*font size adecuado a la resolucion*/
     .text__font{
         font-size: 25px;
@@ -346,6 +353,5 @@ th, td{/*bg y color de las lectras de la tabla*/
     }
     .media__gps{
         width: 100%;
-        asd
     }
 }
