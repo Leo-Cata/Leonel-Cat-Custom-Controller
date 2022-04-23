@@ -6,23 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tu Joystick Lab</title>
 </head>
 <body>
     <header>
-            <h1 class="title title__color wow hinge">Tu Joystick Lab</h1>
-
+        <div class="title__color">
+            <h1 class="title animate__animated animate__backInDown">Tu Joystick Lab</h1>
+        </div>
             <nav class="menu">
                 <ul class="menu__color" >
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="pages/productos.html">Productos</a></li>
-                    <li><a href="pages/precios.html">Nuestros Precios</a></li>
-                    <li><a href="pages/ubicacion.html">Ubicación</a></li>
-                    <li><a href="pages/contactanos.html">Contáctanos</a></li>
+                    <li><a href="index.html" class="active animate__animated animate__zoomIn a">Home</a></li>
+                    <li><a href="pages/productos.html" class="animate__animated animate__zoomIn b">Productos</a></li>
+                    <li><a href="pages/precios.html" class="animate__animated animate__zoomIn c">Nuestros Precios</a></li>
+                    <li><a href="pages/ubicacion.html" class="animate__animated animate__zoomIn d">Ubicación</a></li>
+                    <li><a href="pages/contactanos.html" class="animate__animated animate__zoomIn e">Contáctanos</a></li>
                 </ul>
         </nav>
     </header>
@@ -43,9 +41,9 @@
         <h2 class="subtitle">Productos Creados Por Nuestra Comunidad</h2> 
 
         <div class="banner bannerSample"><!--Fotos mostrando ejemplos de los productos ofrecidos-->
-            <img class="banner__img imgSample" src="img/sample1.png" alt="sample" width="620" height="390">
-            <img class="banner__img imgSample" src="img/sample2.png" alt="sample" width="620" height="390">
-            <img class="banner__img imgSample" src="img/producto1.png" alt="sample" width="620" height="390">
+            <img class="banner__img imgSample animate__animated animate__fadeIn" src="img/sample1.png" alt="sample" width="620" height="390">
+            <img class="banner__img imgSample animate__animated animate__fadeIn" src="img/sample2.png" alt="sample" width="620" height="390">
+            <img class="banner__img imgSample animate__animated animate__fadeIn" src="img/producto1.png" alt="sample" width="620" height="390">
         </div>
     </main>
 
@@ -58,8 +56,8 @@
 
     <!--wow animation-->
     <script src="js/wow.min.js"></script>
-            <script>
-            new WOW().init();
-            </script>
+    <script>
+    new WOW().init();
+    </script>
 </body>
 </html>
