@@ -24,6 +24,8 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    align-items: center;
 }
 .icon{
     background-image: url(../img/icon-xbox.png);
@@ -398,8 +400,4 @@ th, td{/*bg y color de las lectras de la tabla*/
     .text__font{
         font-size: 25px;
     }
-}
-.title{
-    text-align: center;
-    align-items: center;
 }
