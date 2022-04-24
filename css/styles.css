@@ -13,7 +13,6 @@
 .title__color{/*bg color para los titulos de todas las paginas y demas*/
     font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: space-between;
     background-color: #1A132F;
     color: #fff;
 }
@@ -24,21 +23,16 @@
     display: flex;
     justify-content: space-around;
 }
-.asd{
-    display: flex;
-    justify-content: center;
-    width: 95%;
-}
-.icon__logo{
+.icon{
     background-image: url(../img/icon-xbox.png);
     background-size: cover;
     filter: invert(1);
-    width: 70px;
-    height: 49px;
+    width: 76px;
+    height: 53px;
+    margin: 2px;
+    cursor: pointer;
 }
-.icon{
-    padding: 5px;
-}
+
 .menu__color{/*bg color y demas para los textos de todas las paginas*/
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -259,7 +253,7 @@ th, td{/*bg y color de las lectras de la tabla*/
 @media only screen and (max-width: 559px){
     
     .title{/*font size adecuado a la resolucion*/
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     /*menu en forma de columna para vista mobile y demas*/
     .menu__color{
@@ -329,6 +323,10 @@ th, td{/*bg y color de las lectras de la tabla*/
         width: fit-content;
         height: 100px;
     }
+    .icon{
+        width: 45px;
+        height: 32px;
+    }
 }
 
 
@@ -338,7 +336,7 @@ th, td{/*bg y color de las lectras de la tabla*/
         font-size: 20px;
     }
     .title{
-        font-size: 4vh;
+        font-size: 24px;
     }
     .grid{
         display: grid;
@@ -373,9 +371,9 @@ th, td{/*bg y color de las lectras de la tabla*/
         width: 200px;
     }
     /*grilla*/
-    .icon__logo{
-        width: 50px;
-        height: 35px;
+    .icon{
+        width: 45px;
+        height: 30px;
     }
 }
 
@@ -395,13 +393,13 @@ th, td{/*bg y color de las lectras de la tabla*/
         font-size: 25px;
     }
 }
+.asd{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+}
 
-@media only screen and (min-width: 320px) and (max-width: 559px){
-    .icon__logo{
-        width: 33px;
-        height: 22px;
-    }
-    .title{
-        margin-right: 49px;
-    }
+.title{
+    text-align: center;
+    align-items: center;
 }
