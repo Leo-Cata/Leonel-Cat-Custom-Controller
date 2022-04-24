@@ -12,7 +12,9 @@
 /*header*/
 .title__color{/*bg color para los titulos de todas las paginas y demas*/
     font-family: 'Poppins', sans-serif;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
     background-color: #1A132F;
     color: #fff;
 }
@@ -229,7 +231,7 @@ th, td{/*bg y color de las lectras de la tabla*/
 /*footer*/
 .socials li{/*color y demas para los footers de todas las paginas*/
     color: #fff;
-    padding: 16px;
+    /* padding: 16px; */
     /* display: grid;
     align-items: end; */
 }
@@ -239,6 +241,8 @@ th, td{/*bg y color de las lectras de la tabla*/
     justify-content: space-evenly;
     list-style: none;
     font-family: 'Poppins', sans-serif;
+    padding-top: 5px;
+    font-size: 25px;
 }
 /*footer*/
 .imgSample{
@@ -310,7 +314,6 @@ th, td{/*bg y color de las lectras de la tabla*/
 
     /*footer*/
     .socials{/*footer en viste de columna para vista mobile y demas*/
-    flex-direction: column;
     font-size: 13px;
     }
     /*banner*/
@@ -336,6 +339,9 @@ th, td{/*bg y color de las lectras de la tabla*/
         font-size: 20px;
     }
     .title{
+        font-size: 24px;
+    }
+    .subtitle{
         font-size: 24px;
     }
     .grid{
@@ -393,12 +399,6 @@ th, td{/*bg y color de las lectras de la tabla*/
         font-size: 25px;
     }
 }
-.asd{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
-}
-
 .title{
     text-align: center;
     align-items: center;
