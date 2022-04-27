@@ -3,11 +3,44 @@
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
 */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*bootstrap menu*/
+.navbar{
+    margin: 0 0 .5rem 0;
+    padding: 0;
+}
+.rounded-pill{
+    filter: invert(1);
+}
+.navbar-nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-link{
+    color: #fff;
+}
+.nav-link:hover{
+    color: rgb(172, 172, 172);
+}
+.active{
+    color: rgb(172, 172, 172);
+}
+.navbar-brand{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.bg-color{
+    background-color: #1A132F;
+}
+/*bootstrap menu*/
 
 /*header*/
 .title__color{/*bg color para los titulos de todas las paginas y demas*/
@@ -18,7 +51,7 @@
     background-color: #1A132F;
     color: #fff;
 }
-.title{
+/* .title{ old codigo para el titulo dentro del navbar
     font-size: 40px;
     margin: 0 auto;
     width: 100%;
@@ -26,8 +59,8 @@
     justify-content: space-around;
     text-align: center;
     align-items: center;
-}
-.icon{
+} */
+/* .icon{ old code para el icono dentro del navbar
     background-image: url(../img/icon-xbox.png);
     background-size: cover;
     filter: invert(1);
@@ -35,13 +68,12 @@
     height: 53px;
     margin: 2px;
     cursor: pointer;
-}
+} */
 
 .menu__color{/*bg color y demas para los textos de todas las paginas*/
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     list-style: none;
-    background-color: #5B7DB1;
     display: flex;
     justify-content: space-evenly;
 }
@@ -57,17 +89,31 @@ a:hover, .active{ /*color mas oscuro cuando se esta en la pagino y caundo se pas
 /*header*/
 
 /*main*/
+.img__promocional{ /*ocupa todo el ancho de la pagina, full responsive*/
+    width: 100%;
+    margin: .5rem 0;
+}
+.text__font{/*font del subtitulo de la pagina principal*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    /* display: flex; capaz es redundante
+    justify-content: center;
+    align-items: flex-end; */
+}
+.img__text{/*hace que el texto este por encima de la imagen y posicionamiento*/
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
 .media__pos{/*possicion del iframe YT para todas las paginas*/
     display: flex;
     justify-content: center;
     margin: 0 auto;
-}
-
-.text__font{/*font del subtitulo de la pagina principal*/
-    font-family: 'Roboto', sans-serif;
-    font-size: 35px;
-    text-align: center;
-    font-style: italic;
 }
 
 .subtitle{/*font para los subtitulos de la pagina principal*/
@@ -233,9 +279,6 @@ th, td{/*bg y color de las lectras de la tabla*/
 /*footer*/
 .socials li{/*color y demas para los footers de todas las paginas*/
     color: #fff;
-    /* padding: 16px; */
-    /* display: grid;
-    align-items: end; */
 }
 .socials{
     background-color: #1A132F;
