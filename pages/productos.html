@@ -64,8 +64,9 @@
         </nav>
     </header>
     <!-- menu end -->
-    
+
     <main>
+        <!--  -->
         <div class="container-fluid vid">
             <div class="row">
                 <video loop autoplay muted class="col-12">
@@ -80,72 +81,67 @@
                 </div>
             </div>
         </div>
-        <!-- <section class="img container-fluid">
-            <img class="img__principal" src="../img/promotional.jpg" alt="imagen promocional">
-        </section> -->
-        
-        
+        <!-- iframe responsibe https://www.w3schools.com/howto/howto_css_responsive_iframes.asp -->
+        <section class=" container iframe">
+            <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/GCxjMfnugcU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
 
-        <div class="row">
         <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/producto1.png" alt="Joystick 1" class="d-block w-100" id="carousel__size">
+        <div class="row">
+            <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/producto1.png" alt="Joystick 1" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto3.png" alt="Joystick 2" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto4.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto5.png" alt="Joystick 4" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto6.png" alt="Joystick 5" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto7.png" alt="Joystick 6" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto8.png" alt="Joystick 7" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto9.png" alt="Joystick 8" class="d-block w-100" id="carousel__size">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/producto10.png" alt="Joystick 9" class="d-block w-100" id="carousel__size">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="../img/producto2.png" alt="Joystick 2" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto3.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto4.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto5.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto6.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto7.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto8.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto9.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/producto10.png" alt="Joystick 3" class="d-block w-100" id="carousel__size">
-                </div>
-            </div>
 
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
         </div>
-    </div>
+        <!-- carousel -->
     </main>
-    <section class=" container carousel__iframe">
-        <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/GCxjMfnugcU"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </section>
+
     <footer class="socials">
-        <li><a class="facebook" href="https://Facebook.com" target="_blank"><i
+        <li><a class="facebook" href="https://www.facebook.com/xbox/" target="_blank"><i
                     class="fa-brands fa-facebook-square"></i></i></a></li>
         <!--link a la empresa-->
-        <li><a class="twitter" href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a class="twitter" href="https://twitter.com/Xbox" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
         <!--link a la empresa-->
-        <li><a class="instagram" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <li><a class="instagram" href="https://www.instagram.com/xbox" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </li>
         <!--link a la empresa-->
     </footer>

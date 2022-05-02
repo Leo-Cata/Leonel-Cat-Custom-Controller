@@ -101,11 +101,6 @@ a:hover,
     align-self: flex-end;
 }
 
-.img {
-    width: 80%;
-    /* margin-bottom: 1rem; */
-}
-
 .img__principal {
     /*posicion de la imagen principal de la pestaña productos*/
     margin: 0 auto;
@@ -135,24 +130,7 @@ a:hover,
     text-align: center;
 }
 
-
-.bgEmptyBox {
-    /*caja bacia con color de fondo*/
-    background-color: #5B7DB1;
-    height: 70px;
-}
-
-.prodPos {
-    /*pocision de las imagenes promocionales*/
-    margin: 0 auto;
-}
-
-.img__catalogo {
-    /*pos de la imagen del catalogo*/
-    margin: 16px 200px;
-}
-
-/*video + texto*/
+/*productos video + texto*/
 .vid__overlayText {
     position: absolute;
     display: flexbox;
@@ -164,6 +142,8 @@ a:hover,
 h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    height: fit-content;
+    overflow: hidden;
 }
 
 p {
@@ -182,13 +162,42 @@ p {
 
 /*video + texto*/
 
+/* productos iframe responsibe & 16:9 */
+iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: auto;
+    padding-top: 56.25%;
+    border-radius: 0.5rem;
+}
+
+.responsive-iframe {
+    margin: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+/* productos iframe responsibe & 16:9 */
 /*main*/
 
 /*form*/
-.tabla,
+/* .tabla,
 th,
 td {
-    /*dimensiones y centrado para la table*/
+    /*dimensiones y centrado para la table
     margin: 0 770px;
     text-align: center;
     border: 2px solid #000;
@@ -197,10 +206,8 @@ td {
 
 th,
 td {
-    /*bg y color de las lectras de la tabla*/
-    background-color: #435d82;
-    color: #F7E2E2;
-}
+    /*bg y color de las lectras de la tabla
+} */
 
 .media__gps {
     /*pos del mapa*/
@@ -298,7 +305,7 @@ td {
 }
 
 .carousel {
-    width: 40%;
+    max-width: 40%;
     margin: 0 auto;
 }
 
@@ -352,9 +359,9 @@ td {
         font-size: 1.3vh;
     }
 
-    .text__font {
-        /*font size adecuado a la resolucion*/
-        font-size: 15px;
+    .text__font{
+        font-size: 13px;
+        width: 95%;
     }
 
     .subtitle {
@@ -384,6 +391,7 @@ td {
         width: 45px;
         height: 32px;
     }
+
 }
 
 
@@ -419,7 +427,6 @@ td {
     .media__gps {
         width: 100%;
     }
-
 }
 
 @media screen and (max-width: 1352px) {
@@ -428,11 +435,6 @@ td {
         display: flex;
         justify-content: center;
     }
-
-    .text__font {
-        font-size: 19px;
-    }
-
     .vid__overlayText {
         position: static;
         display: flex;
@@ -447,30 +449,14 @@ td {
     p {
         font-size: 15px;
     }
+    .carousel{
+        min-width: 65%;
+    
+        }  
 }
-
-.carousel__iframe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    position: relative;
+h2{
     overflow: hidden;
-    width: 80%;
-    height: auto;
-    padding-top: 56.25%;
-    border-radius: 0.5rem;
 }
-.responsive-iframe {
-    margin: 1rem 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
+.tableV2{
+    width: 80%;
 }

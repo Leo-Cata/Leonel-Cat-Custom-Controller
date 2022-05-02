@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--animate.css animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--font awesome footer icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap 5.x -->
     <link rel="stylesheet" href="../css/styles.css">
+    <!--css-->
     <link href="../img/favicon.ico" rel="icon" type="image/x-icon" />
     <title>Tu Joystick Lab</title>
 </head>
+
 <body>
     <header>
-        <h1 class="title__color" id="title">Tu Joystick Lab</h1>
+        <nav class="navbar navbar-expand-sm bg-color navbar-dark">
 
-        <nav>
-            <ul class="menu__color" id="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="precios.html" class="active">Nuestros Precios</a></li>
-                <li><a href="ubicacion.html">Ubicación</a></li>
-                <li><a href="contactanos.html">Contáctanos</a></li>
-            </ul>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="/img/icon-xbox.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> Xbox Lab
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="productos.html">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="precios.html">Precios</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="ubicacion.html">ubicacion</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactanos.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -30,58 +70,97 @@
             <img class="img__catalogo" src="../img/designs.jpg" alt="diseños">
         </section>
 
-            <table class="tabla" border="1" cellpadding="10"> <!--tabla con diferentes precios de acuerdo a los extras-->
-                <tr>
-                    <th></th>
-                    <th>Armazon</th>
-                    <th>Gatillos</th>
-                    <th>Grips</th>
-                    <th>Botones</th>
-                    <th>Engravado</th>
-                    <th>Precio Extra Por Parte</th>
-                </tr>
+        <table class="tabla table" border="1" cellpadding="10">
+            <!--tabla con diferentes precios de acuerdo a los extras-->
+            <tr>
+                <th></th>
+                <th>Armazon</th>
+                <th>Gatillos</th>
+                <th>Grips</th>
+                <th>Botones</th>
+                <th>Engravado</th>
+                <th>Precio Extra Por Parte</th>
+            </tr>
 
-                <tr>
-                    <th>Metalico</th>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>No</td>
-                    <td>No</td>          
-                    <td>50</td>          
-                </tr>
+            <tr>
+                <th>Metalico</th>
+                <td>Si</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>No</td>
+                <td>No</td>
+                <td>50</td>
+            </tr>
 
-                <tr>
-                    <th>Goma Ergonomica</th>
-                    <td>No</td>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>No</td>
-                    <td>No</td>
-                    <td>35</td>
-                </tr>
+            <tr>
+                <th>Goma Ergonomica</th>
+                <td>No</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>No</td>
+                <td>No</td>
+                <td>35</td>
+            </tr>
 
-                <tr>
-                    <th>Plastico</th>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>Si</td>
-                    <td>0</td>
-                </tr>
+            <tr>
+                <th>Plastico</th>
+                <td>Si</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <!-- table bootstrap -->
+        <div class="container-fluid tableV2 mt-3">
+            <h2>Nuestros Precios Y Combinaciones Disponibles</h2>
+            <!-- <p></p> -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                    </tr>
+                </tbody>
             </table>
+        </div>
 
         <section class="media">
-            <iframe class="media__pos" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-if1ib0C7kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="media__pos" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-if1ib0C7kE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </section>
     </main>
 
     <footer id="socials">
         <li id="mail">Mail: correo@mail.com</li>
-        <li><a href="https://Facebook.com" target="_blank">Facebook</a></li> <!--link a la empresa-->
-        <li><a href="https://twitter.com" target="_blank">Twitter</a></li><!--link a la empresa-->
-        <li><a href="https://instagram.com" target="_blank">Instagram</a></li><!--link a la empresa-->
+        <li><a href="https://Facebook.com" target="_blank">Facebook</a></li>
+        <!--link a la empresa-->
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <!--link a la empresa-->
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <!--link a la empresa-->
     </footer>
 </body>
+
 </html>
