@@ -2,7 +2,9 @@
 
 /* 
 font-family: 'Poppins', sans-serif;
+400 500
 font-family: 'Roboto', sans-serif;
+300 400 500
 */
 * {
     margin: 0;
@@ -103,8 +105,6 @@ a:hover,
 
 .img__principal {
     /*posicion de la imagen principal de la pestaña productos*/
-    margin: 0 auto;
-    display: grid;
     width: 100%;
 }
 
@@ -128,6 +128,8 @@ a:hover,
     font-size: 40px;
     font-weight: bold;
     text-align: center;
+    margin-top: 1rem;
+
 }
 
 /*productos video + texto*/
@@ -139,19 +141,19 @@ a:hover,
     /* max-width: 26vw; */
 }
 
-h3 {
+.vid__title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     height: fit-content;
     overflow: hidden;
 }
 
-p {
+.vid__p {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 
-.btn {
+.vid__button {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
@@ -163,12 +165,6 @@ p {
 /*video + texto*/
 
 /* productos iframe responsibe & 16:9 */
-iframe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .iframe {
     position: relative;
     overflow: hidden;
@@ -176,6 +172,12 @@ iframe {
     height: auto;
     padding-top: 56.25%;
     border-radius: 0.5rem;
+}
+
+iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .responsive-iframe {
@@ -191,23 +193,6 @@ iframe {
 }
 
 /* productos iframe responsibe & 16:9 */
-/*main*/
-
-/*form*/
-/* .tabla,
-th,
-td {
-    /*dimensiones y centrado para la table
-    margin: 0 770px;
-    text-align: center;
-    border: 2px solid #000;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    /*bg y color de las lectras de la tabla
-} */
 
 .media__gps {
     /*pos del mapa*/
@@ -315,6 +300,37 @@ td {
     border-radius: 50%;
 }
 
+/* cards presonalizacion */
+.card {
+    background-color: #1A132F;
+    margin: 1rem;
+}
+
+.card-title,
+.card-text {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.card-text {
+    font-weight: 400;
+}
+
+.row-cards {
+    display: flex;
+    justify-content: space-evenly;
+    --bs-gutter-x: 0
+}
+
+.btn-color {
+    background-color: #5B7DB1;
+    color: #fff;
+}
+
+/* cards presonalizacion */
+/* main */
+
 /*footer*/
 .socials li {
     /*color y demas para los footers de todas las paginas*/
@@ -333,15 +349,6 @@ td {
 }
 
 /*footer*/
-.imgSample {
-    transition: all .25s;
-}
-
-.imgSample:hover {
-    transform: scale(1.05);
-    transition: all .25s;
-    cursor: pointer;
-}
 
 /*responsive*/
 @media only screen and (max-width: 559px) {
@@ -359,7 +366,7 @@ td {
         font-size: 1.3vh;
     }
 
-    .text__font{
+    .text__font {
         font-size: 13px;
         width: 95%;
     }
@@ -435,6 +442,7 @@ td {
         display: flex;
         justify-content: center;
     }
+
     .vid__overlayText {
         position: static;
         display: flex;
@@ -442,21 +450,15 @@ td {
         flex-direction: column;
     }
 
-    h3 {
+    .vid__tittle {
         font-size: 19px;
     }
 
-    p {
+    .vid__p {
         font-size: 15px;
     }
-    .carousel{
+
+    .carousel {
         min-width: 65%;
-    
-        }  
-}
-h2{
-    overflow: hidden;
-}
-.tableV2{
-    width: 80%;
+    }
 }
