@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500&family=Roboto:wght@300;400;500&display=swap');
+/* 
+font-family: 'Poppins', sans-serif;
+400 500
+font-family: 'Roboto', sans-serif;
+300 400 500
+*/
+
+$bg-color: #1A132F;
+$hover-color: rgb(160, 160, 160);
+
+$font-roboto: 'Roboto',
+sans-serif;
+$font-poppins: 'Poppins',
+sans-serif;
+$half-rem-zero: 0.5rem 0;
+$font-25: 25px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+}
+
+// menu starts
+.navbar {
+    // navbar margin .5rem y 0 padding
+    margin: 0 0 $half-rem-zero;
+    padding: 0;
+}
+
+.rounded-pill {
+    // invierte el color del icono para que sea blanco
+    filter: invert(1);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-link {
+    color: #fff;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+.navbar-brand {
+    font-family: $font-roboto;
+    font-size: $font-25;
+}
+
+.bg-color {
+    background-color: $bg-color;
+}
+
+// menu finish
+
+// main starts
+.img__promocional {
+    //ocupa todo el ancho de la pagina, full responsive
+    width: 100%;
+    margin: $half-rem-zero;
+}
+
+.img__text {
+    //hace que el texto este por encima de la imagen y posicionamiento
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.text__font {
+    font-family: $font-poppins;
+    font-size: $font-25;
+    font-weight: 500;
+    text-align: center;
+    width: 50%;
+}
+
+.subtitle {
+    //font para los subtitulos de la pagina principal
+    font-family: $font-roboto;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+// index xbox design img responsive
+.portada__img {
+    padding: $half-rem-zero;
+}
+
+.banner__img {
+    // banner 100% de ancho y que no se haga stretch el height
+    width: 100%;
+    height: fit-content;
+}
+
+// carousel index
+.carousel {
+    // carousel centrado y 40% de ancho
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    // fondo de los flechas negro y redondos
+    background-color: #000;
+    border-radius: 50%;
+}
+
+// main ends
+
+// footer starts
+.socials {
+	a {
+		color: white;
+	}
+    a:hover{
+        color: $hover-color;
+    }
+	height: auto;
+	background-color: $bg-color;
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+	font-family: $font-poppins;
+	padding-top: 5px;
+	font-size: $font-25;
+}
+// footer ends
