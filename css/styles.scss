@@ -1,21 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500&family=Roboto:wght@300;400;500&display=swap');
-/* 
-font-family: 'Poppins', sans-serif;
-400 500
-font-family: 'Roboto', sans-serif;
-300 400 500
-*/
-
-$bg-color: #1A132F;
-$hover-color: rgb(160, 160, 160);
-
-$font-roboto: 'Roboto',
-sans-serif;
-$font-poppins: 'Poppins',
-sans-serif;
-$half-rem-zero: 0.5rem 0;
-$font-25: 25px;
-
+@import url(./_variables.scss);
 
 * {
     margin: 0;
@@ -119,23 +102,172 @@ $font-25: 25px;
     border-radius: 50%;
 }
 
+// productos stuff
+.vid__overlayText {
+    // text over the vid and left center
+    position: absolute;
+    justify-content: flex-end;
+    align-self: center;
+}
+
+.vid__title {
+    font-family: $font-poppins;
+    font-weight: 600;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.vid__p {
+    font-family: $font-poppins;
+    font-weight: 500;
+}
+
+.vid__button {
+    font-family: $font-poppins;
+    font-weight: 300;
+}
+
+.vid__btn {
+    padding: 0;
+}
+
+.iframe {
+    // video responsive 16:9
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: auto;
+    padding-top: 56.25%;
+    border-radius: 0.5rem;
+}
+
+iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-iframe {
+    margin: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+// perzonalizacion
+.img__principal {
+    width: 100%;
+}
+
+// card stuff
+.card {
+    background-color: $bg-color;
+    margin: 1rem;
+}
+
+.card-title,
+.card-text {
+    color: white;
+    font-family: $font-poppins;
+    font-weight: 400;
+}
+
+.row-cards {
+    display: flex;
+    justify-content: space-evenly;
+    --bs-gutter-x: 0;
+}
+
+.btn-color {
+    background-color: $bg-color-2;
+    color: white;
+}
+
 // main ends
 
 // footer starts
 .socials {
-	a {
-		color: white;
-	}
-    a:hover{
+    a {
+        color: white;
+    }
+
+    a:hover {
         color: $hover-color;
     }
-	height: auto;
-	background-color: $bg-color;
-	display: flex;
-	justify-content: space-evenly;
-	list-style: none;
-	font-family: $font-poppins;
-	padding-top: 5px;
-	font-size: $font-25;
+
+    height: auto;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: $font-poppins;
+    padding-top: 5px;
+    font-size: $font-25;
 }
+
 // footer ends
+
+// responsive
+@media only screen and (max-width: 559px) {
+    .text__font {
+        font-size: 13px;
+        width: 95%;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        width: 95%;
+    }
+
+    // footer
+    .socials {
+        font-size: 13px;
+    }
+
+    // font sizes adecuado para los breakpoints
+}
+
+@media only screen and (min-width: 560px) and (max-width: 960px) {
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .text__font {
+        font-size: 17px;
+    }
+
+    // font sizes adecuado para los breakpoints
+}
+
+@media only screen and (max-width: 1352px) {
+    .img__text {
+        // texto por debajo de la imagen en index
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel {
+        min-width: 65%;
+    }
+
+    .vid__overlayText {
+        position: static;
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+    }
+
+    .vid__title {
+        font-size: 19px;
+    }
+
+    .vid__p {
+        font-size: 16px;
+    }
+}

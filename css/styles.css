@@ -5,11 +5,13 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif;
 300 400 500
 */
+@import url(./_variables.scss);
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -19,7 +21,7 @@ font-family: 'Roboto', sans-serif;
 
 .rounded-pill {
   -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
 }
 
 .navbar-nav {
@@ -27,10 +29,10 @@ font-family: 'Roboto', sans-serif;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav-link {
@@ -47,7 +49,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 .bg-color {
-  background-color: #1A132F;
+  background-color: #1a132f;
 }
 
 .img__promocional {
@@ -61,10 +63,10 @@ font-family: 'Roboto', sans-serif;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 .text__font {
@@ -105,15 +107,112 @@ font-family: 'Roboto', sans-serif;
   border-radius: 50%;
 }
 
-.socials {
+.vid__overlayText {
+  position: absolute;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.vid__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.vid__p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.vid__button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.vid__btn {
+  padding: 0;
+}
+
+.iframe {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
   height: auto;
-  background-color: #1A132F;
+  padding-top: 56.25%;
+  border-radius: 0.5rem;
+}
+
+iframe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.responsive-iframe {
+  margin: 1rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.img__principal {
+  width: 100%;
+}
+
+.card {
+  background-color: #1a132f;
+  margin: 1rem;
+}
+
+.card-title,
+.card-text {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.row-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  --bs-gutter-x: 0;
+}
+
+.btn-color {
+  background-color: #5b7db1;
+  color: white;
+}
+
+.socials {
+  height: auto;
+  background-color: #1a132f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   list-style: none;
   font-family: "Poppins", sans-serif;
   padding-top: 5px;
@@ -127,4 +226,69 @@ font-family: 'Roboto', sans-serif;
 .socials a:hover {
   color: #a0a0a0;
 }
+
+@media only screen and (max-width: 559px) {
+  .text__font {
+    font-size: 13px;
+    width: 95%;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    width: 95%;
+  }
+
+  .socials {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 560px) and (max-width: 960px) {
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .text__font {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1352px) {
+  .img__text {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .carousel {
+    min-width: 65%;
+  }
+
+  .vid__overlayText {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .vid__title {
+    font-size: 19px;
+  }
+
+  .vid__p {
+    font-size: 15px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
