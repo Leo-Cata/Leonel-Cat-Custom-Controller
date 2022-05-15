@@ -186,7 +186,8 @@ iframe {
 }
 
 .card-title,
-.card-text {
+.card-text,
+.btn-color {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: white;
@@ -208,10 +209,7 @@ iframe {
 }
 
 .btn-color {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
   background-color: #5B7DB1;
-  color: white;
 }
 
 .socials {
@@ -246,10 +244,7 @@ iframe {
 }
 
 @media only screen and (max-width: 559px) {
-  .text__font {
-    font-size: 13px;
-    width: 95%;
-  }
+  .text__font,
   .subtitle {
     font-size: 13px;
     width: 95%;

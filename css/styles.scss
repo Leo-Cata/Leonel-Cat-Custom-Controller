@@ -196,9 +196,9 @@ iframe {
 }
 
 .btn-color {
-    @include fonts($font-poppins, 300);
+    // extend usando font + color y agregando background color secundario
+    @extend .card-text;
     background-color: $bg-color-2;
-    color: white;
 }
 
 // main ends
@@ -248,11 +248,8 @@ iframe {
 
 // responsive
 @media only screen and (max-width: 559px) {
-    .text__font {
-        font-size: 13px;
-        width: 95%;
-    }
 
+    .text__font,
     .subtitle {
         font-size: 13px;
         width: 95%;
