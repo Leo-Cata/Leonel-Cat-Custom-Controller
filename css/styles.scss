@@ -1,4 +1,4 @@
-@import url(./_variables.scss);
+@import "_variables.scss";
 
 * {
     margin: 0;
@@ -19,9 +19,14 @@
     filter: invert(1);
 }
 
+@mixin display($mode, $justify) {
+    // mixin para flex y tipo de justify
+    display: $mode;
+    justify-content: $justify;
+}
+
 .navbar-nav {
-    display: flex;
-    justify-content: space-evenly;
+    @include display(flex, space-evenly);
     width: 100%;
     font-family: 'Roboto', sans-serif;
 }
@@ -50,42 +55,43 @@
     //ocupa todo el ancho de la pagina, full responsive
     width: 100%;
     margin: $half-rem-zero;
+    border-radius: 1rem;
 }
 
 .img__text {
     //hace que el texto este por encima de la imagen y posicionamiento
     position: absolute;
-    display: flex;
-    justify-content: center;
+    @include display(flex, center);
     align-self: flex-end;
 }
 
+@mixin fonts($family, $weight) {
+    // mixin para los fonts y weigts
+    font-family: $family;
+    font-weight: $weight;
+}
+
 .text__font {
-    font-family: $font-poppins;
+    @include fonts($font-poppins, 800);
     font-size: $font-25;
-    font-weight: 500;
     text-align: center;
     width: 50%;
 }
 
 .subtitle {
     //font para los subtitulos de la pagina principal
-    font-family: $font-roboto;
+    @include fonts($font-roboto, bold);
     font-size: 40px;
-    font-weight: bold;
     text-align: center;
     margin-top: 1rem;
-}
-
-// index xbox design img responsive
-.portada__img {
-    padding: $half-rem-zero;
 }
 
 .banner__img {
     // banner 100% de ancho y que no se haga stretch el height
     width: 100%;
     height: fit-content;
+    padding: $half-rem-zero;
+    border-radius: 1rem;
 }
 
 // carousel index
@@ -103,6 +109,11 @@
 }
 
 // productos stuff
+.prod-rows {
+    // para que no desvorde eje-x el carousel en productos
+    margin: 0;
+}
+
 .vid__overlayText {
     // text over the vid and left center
     position: absolute;
@@ -111,20 +122,18 @@
 }
 
 .vid__title {
-    font-family: $font-poppins;
-    font-weight: 600;
+    @include fonts($font-roboto, 400);
     height: fit-content;
     overflow: hidden;
 }
 
 .vid__p {
-    font-family: $font-poppins;
-    font-weight: 500;
+    @include fonts($font-poppins, 500);
+    font-size: 18px;
 }
 
 .vid__button {
-    font-family: $font-poppins;
-    font-weight: 300;
+    @include fonts($font-poppins, 300);
 }
 
 .vid__btn {
@@ -142,8 +151,7 @@
 }
 
 iframe {
-    display: flex;
-    justify-content: center;
+    @include display(flex, center);
     align-items: center;
 }
 
@@ -162,6 +170,7 @@ iframe {
 // perzonalizacion
 .img__principal {
     width: 100%;
+    border-radius: 1rem;
 }
 
 // card stuff
@@ -172,18 +181,22 @@ iframe {
 
 .card-title,
 .card-text {
+    @include fonts($font-poppins, 300);
     color: white;
-    font-family: $font-poppins;
-    font-weight: 400;
+}
+
+.card-title {
+    @include fonts($font-roboto, 500);
+
 }
 
 .row-cards {
-    display: flex;
-    justify-content: space-evenly;
+    @include display(flex, space-evenly);
     --bs-gutter-x: 0;
 }
 
 .btn-color {
+    @include fonts($font-poppins, 300);
     background-color: $bg-color-2;
     color: white;
 }
@@ -192,18 +205,39 @@ iframe {
 
 // footer starts
 .socials {
+
     a {
         color: white;
     }
 
-    a:hover {
-        color: $hover-color;
+    @mixin red($h-color) {
+        // mixin para el hover color del footer
+        color: $h-color;
+    }
+
+    $redes: (facebook: #3b5998,
+        twitter: #1D9BF0,
+        instagram: #833AB4,
+    );
+
+    .facebook:hover {
+        $facebook: map-get($redes, facebook);
+        @include red($facebook)
+    }
+
+    .twitter:hover {
+        $twitter: map-get($redes, twitter);
+        @include red($twitter)
+    }
+
+    .instagram:hover {
+        $instagram: map-get($redes, instagram);
+        @include red($instagram)
     }
 
     height: auto;
     background-color: $bg-color;
-    display: flex;
-    justify-content: space-evenly;
+    @include display(flex, space-evenly);
     list-style: none;
     font-family: $font-poppins;
     padding-top: 5px;
@@ -248,8 +282,7 @@ iframe {
     .img__text {
         // texto por debajo de la imagen en index
         position: static;
-        display: flex;
-        justify-content: center;
+        @include display(flex, center);
     }
 
     .carousel {
