@@ -214,6 +214,8 @@ iframe {
 
 .socials {
   height: auto;
+  width: 100%;
+  bottom: 0;
   background-color: #1A132F;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,9 +250,6 @@ iframe {
   .subtitle {
     font-size: 13px;
     width: 95%;
-  }
-  .socials {
-    font-size: 13px;
   }
 }
 
@@ -295,5 +294,74 @@ iframe {
   .vid__p {
     font-size: 16px;
   }
+}
+
+.form__wrapper {
+  width: 50%;
+  background-color: #3b5998;
+  margin-bottom: 180px;
+  border-radius: 1rem;
+  padding-top: 1px;
+  padding-bottom: 1rem;
+}
+
+.form-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #fff;
+}
+
+.form__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.form-check {
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.check__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #fff;
+}
+
+.form-control {
+  resize: none;
+}
+
+.backgroung__container {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+
+.bg__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
 }
 /*# sourceMappingURL=styles.css.map */
