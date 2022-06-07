@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500&family=Roboto:wght@300;400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Poppins:ital,wght@0,400;1,500&display=swap');
 /* 
 font-family: 'Poppins', sans-serif;
 400 500
-font-family: 'Roboto', sans-serif;
-300 400 500
+font-family: 'Libre Franklin', sans-serif;
+400 500 600
 */
 
 $bg-color: #1A132F; // color principal
 $bg-color-2: #5B7DB1; // color secundario para botones
-$hover-color: rgb(160, 160, 160); // hover color
-$font-roboto: 'Roboto',
-sans-serif;
 $font-poppins: 'Poppins',
 sans-serif;
+$font-frank: 'Libre Franklin', sans-serif;
 $half-rem-zero: 0.5rem 0;
 $font-25: 25px;
-// breakpoints
-$l-breakpoint: 1352px;
-$sl-breakpoints: 960px;
-$sm-breakpoint: 559px;
-$s-breakpoint: 560px;

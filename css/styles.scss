@@ -1,10 +1,21 @@
 @import "_variables.scss";
-
 * {
+    // reset
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // overflow-x: hidden;
+}
+
+@mixin fonts($family, $weight) {
+    // mixin para los fonts y weigts
+    font-family: $family;
+    font-weight: $weight;
+}
+
+@mixin display($mode, $justify) {
+    // mixin para flex y tipo de justify
+    display: $mode;
+    justify-content: $justify;
 }
 
 // menu starts
@@ -19,40 +30,26 @@
     filter: invert(1);
 }
 
-@mixin display($mode, $justify) {
-    // mixin para flex y tipo de justify
-    display: $mode;
-    justify-content: $justify;
-}
-
 .navbar-nav {
+    // space evenly y fonts los textos del menu
     @include display(flex, space-evenly);
     width: 100%;
-    font-family: 'Roboto', sans-serif;
-}
-
-.nav-link {
-    color: #fff;
-
-    &:hover {
-        color: $hover-color;
-    }
+    @include fonts($font-frank, 500);
 }
 
 .navbar-brand {
-    font-family: $font-roboto;
+    font-family: $font-frank;
     font-size: $font-25;
 }
 
 .bg-color {
     background-color: $bg-color;
 }
-
 // menu finish
 
 // main starts
 .img__promocional {
-    //ocupa todo el ancho de la pagina, full responsive
+    //ocupa todo el ancho del div, full responsive
     width: 100%;
     margin: $half-rem-zero;
     border-radius: 1rem;
@@ -65,25 +62,14 @@
     align-self: flex-end;
 }
 
-@mixin fonts($family, $weight) {
-    // mixin para los fonts y weigts
-    font-family: $family;
-    font-weight: $weight;
-}
+
 
 .text__font {
-    @include fonts($font-poppins, 800);
+    // font, sizes, etc
+    @include fonts($font-frank, 500);
     font-size: $font-25;
     text-align: center;
     width: 50%;
-}
-
-.subtitle {
-    //font para los subtitulos de la pagina principal
-    @include fonts($font-roboto, bold);
-    font-size: 40px;
-    text-align: center;
-    margin-top: 1rem;
 }
 
 .banner__img {
@@ -108,9 +94,9 @@
     border-radius: 50%;
 }
 
-// productos stuff
+// productos starts
 .prod-rows {
-    // para que no desvorde eje-x el carousel en productos
+    // para que no desborde eje-x el carousel en productos
     margin: 0;
 }
 
@@ -122,41 +108,52 @@
 }
 
 .vid__title {
-    @include fonts($font-roboto, 400);
+    // fonts, sizes, etc
+    @include fonts($font-frank, 600);
+    font-size: 31;
     height: fit-content;
     overflow: hidden;
 }
 
 .vid__p {
+    // fonts, sizes, etc
     @include fonts($font-poppins, 500);
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .vid__button {
+    // fonts, sizes, etc
     @include fonts($font-poppins, 300);
 }
 
 .vid__btn {
+    // btn alineado con el texto
     padding: 0;
 }
 
 .iframe {
-    // video responsive 16:9
+    // video yt responsive 16:9
     position: relative;
     overflow: hidden;
-    width: 80%;
-    height: auto;
+    width: 100%;
     padding-top: 56.25%;
-    border-radius: 0.5rem;
 }
 
 iframe {
+    // iframe yt alineaciones
     @include display(flex, center);
     align-items: center;
 }
 
+.iframe__size {
+    // div para cambiar el tamaño del video yt
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 1rem;
+}
+
 .responsive-iframe {
-    margin: 1rem 0;
+    // iframe responsive
     position: absolute;
     top: 0;
     left: 0;
@@ -164,33 +161,51 @@ iframe {
     right: 0;
     width: 100%;
     height: 100%;
-    border-radius: 0.5rem;
 }
+
+// carousel productos
+.carousel__prod {
+    // max width y padding
+    max-width: 80%;
+    padding: 1rem;
+}
+
+#carousel__border {
+    // bordes redondeados
+    border-radius: 2rem;
+}
+// productos ends
 
 // perzonalizacion
 .img__principal {
+    // img de portada de perzonalizacion ocupando todo el div
     width: 100%;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
-// card stuff
-.card {
+// card starts
+.card__personalizaciones {
+    // colores de fondo y margen
     background-color: $bg-color;
     margin: 1rem;
 }
 
 .card-title,
 .card-text {
+    // fonts, size, etc
     @include fonts($font-poppins, 300);
     color: white;
 }
 
 .card-title {
-    @include fonts($font-roboto, 500);
+    // fonts, size, etc
+    @include fonts($font-frank, 500);
 
 }
 
 .row-cards {
+    // fonts, size, etc
     @include display(flex, space-evenly);
     --bs-gutter-x: 0;
 }
@@ -200,6 +215,118 @@ iframe {
     @extend .card-text;
     background-color: $bg-color-2;
 }
+// cards ends
+
+.titles__text {
+    // personalizacion para todos los titulos 
+    background-color: $bg-color-2;
+    color: #fff;
+    max-width: fit-content;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    @include fonts($font-frank, 500);
+    margin-top: 1rem;
+    text-align: center;
+}
+// acordion starts
+.text__description {
+    // font, sizes, etc
+    @include fonts($font-poppins, 500);
+    font-size: 1.15rem;
+    padding: 0 1rem 0 1rem;
+}
+
+#accordion {
+    // margen para el acordion
+    margin: 1rem;
+}
+
+.accordion__tittle {
+    // font, sizes. etc
+    @include fonts($font-frank, 500);
+    font-size: 1.25rem;
+}
+// acordion ends
+
+// nosotros starts
+.gps {
+    // posicionamientos para el mapa
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+}
+
+.building__img {
+    // personalizaciones para la foto del edificio
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.building__img:hover {
+    // efecto when hovering
+    transform: scale3d(0.98, 0.98, 0.98);
+    transition: 0.2s;
+    filter: grayscale(50%);
+}
+// nosotros ends
+
+// contactanos starts
+// form
+.form__wrapper {
+// div para tamaño y demas del form
+    width: 65%;
+    background-color: #3b5998;
+    margin-bottom: 180px;
+    border-radius: 1rem;
+    padding-top: 1px;
+    padding-bottom: 1rem;
+}
+
+.form-label {
+    // font, sizes, etc
+    @include fonts($font-poppins, 500);
+    color: #fff;
+}
+
+.form__title {
+    // font, sizes, etc
+    @include fonts($font-frank, 600);
+    color: #fff;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.form-control {
+    //textarea sin tamaño editable
+    resize: none;
+}
+
+// fixed img, la centra y lo pone por debajo cubriendo toda la pagina
+.backgroung__container {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+
+.bg__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+// contactanos ends
 
 // main ends
 
@@ -241,7 +368,6 @@ iframe {
     background-color: $bg-color;
     @include display(flex, space-evenly);
     list-style: none;
-    font-family: $font-poppins;
     padding-top: 5px;
     font-size: $font-25;
 }
@@ -250,20 +376,14 @@ iframe {
 
 // responsive
 @media only screen and (max-width: 559px) {
-
-    .text__font,
-    .subtitle {
-        font-size: 13px;
-        width: 95%;
+    .carousel__gamesIMG {
+        font-size: 1rem;
     }
+
     // font size adecuado para los breakpoints
 }
 
 @media only screen and (min-width: 560px) and (max-width: 960px) {
-    .subtitle {
-        font-size: 24px;
-    }
-
     .text__font {
         font-size: 17px;
     }
@@ -296,65 +416,4 @@ iframe {
     .vid__p {
         font-size: 16px;
     }
-}
-
-// form
-.form__wrapper {
-    width: 50%;
-    background-color: #3b5998;
-    margin-bottom: 180px;
-    border-radius: 1rem;
-    padding-top: 1px;
-    padding-bottom: 1rem;
-}
-
-.form-label {
-    @include fonts($font-poppins, 500);
-    color: #fff;
-}
-
-.form__title {
-    @include fonts($font-roboto, 600);
-    color: #fff;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.form-check {
-    padding: 1rem;
-    margin-left: 1rem;
-}
-
-.check__row {
-    @include display(flex, center);
-    justify-content: space-evenly;
-    align-items: flex-end;
-    color: #fff;
-}
-
-.form-control {
-    //textarea sin que se pueda editar el tamaño
-    resize: none;
-}
-
-// fixed img, la centra y lo pone por debajo cubriendo toda la pagina
-.backgroung__container {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    z-index: -1;
-}
-
-.bg__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    min-width: 50%;
-    min-height: 50%;
 }

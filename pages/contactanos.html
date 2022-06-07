@@ -51,15 +51,15 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="personalizacion.html">Personalizaciones</a>
+                            <a class="nav-link" href="personalizacion.html">Personalizaciones</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="ubicacion.html">ubicación</a>
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contactanos.html">Contáctanos</a>
+                            <a class="nav-link active" href="contactanos.html">Contáctanos</a>
                         </li>
                     </ul>
                 </div>
@@ -68,18 +68,21 @@
     </header>
 
     <main>
+        <!-- img de fondo starts + titulo-->
         <div class="container-fluid backgroung__container">
             <img src="../img/pexels-yurii-hlei-1365795.jpg" alt="Imagen De Fondo Joystick " class="bg__img">
         </div>
         <div class="container-fluid form__title">
             <h2>Si querés realizar tu pedido, una pregunta o alguna recomendación, escribinos!</h2>
         </div>
+        <!-- img de fondo + titulo ends -->
 
+        <!-- formulario starts -->
         <div class="container-fluid form__wrapper">
             <form action="#">
                 <div class="mb-3 mt-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    <input type="email" class="form-control" id="email" placeholder="email@mail.com" name="email">
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="name" class="form-label">Nombre Y Apellido</label>
@@ -87,7 +90,7 @@
                 </div>
                 <label for="name" class="form-label">Razón De Contacto</label>
                 <select class="form-select" aria-label="Default select example">
-                    <option hidden >Razón De Contacto</option>
+                    <option hidden>Razón De Contacto</option>
                     <option value="1">Pedido</option>
                     <option value="2">Consultas</option>
                     <option value="3">Feedback</option>
@@ -105,6 +108,7 @@
                 <button type="submit" class="btn btn-primary btn__form">Enviar</button>
             </form>
         </div>
+        <!-- formulario ends -->
     </main>
 
     <footer class="socials">
