@@ -280,7 +280,7 @@ iframe {
 .form__wrapper {
 // div para tamaño y demas del form
     width: 65%;
-    background-color: #3b5998;
+    background-color: $bg-color-2;
     margin-bottom: 180px;
     border-radius: 1rem;
     padding-top: 1px;
@@ -300,6 +300,10 @@ iframe {
     margin-bottom: 3rem;
     margin-top: 2rem;
     text-align: center;
+    background-color: $bg-color-2;
+    border-radius: 1rem;
+    width: fit-content;
+    max-width: 65%;
 }
 .form-control {
     //textarea sin tamaño editable
@@ -380,17 +384,11 @@ iframe {
         font-size: 1rem;
     }
 
+    .text__font{
+        font-size: 1rem;
+    }
     // font size adecuado para los breakpoints
 }
-
-@media only screen and (min-width: 560px) and (max-width: 960px) {
-    .text__font {
-        font-size: 17px;
-    }
-
-    // font sizes adecuado para los breakpoints
-}
-
 @media only screen and (max-width: 1352px) {
     .img__text {
         // texto por debajo de la imagen en index
@@ -415,5 +413,8 @@ iframe {
 
     .vid__p {
         font-size: 16px;
+    }
+    .text__font {
+        width: 70%;
     }
 }
